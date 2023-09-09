@@ -1,0 +1,40 @@
+---
+- name: Deploy and Undeploy Web Servers
+  hosts: web_servers
+  become: yes
+
+  tasks:
+  
+    
+    - name: Start and enable httpd service
+      service:
+        name: httpd
+        enabled: true
+        state: started
+        
+    - name: Deploy Web Server
+      template:
+        src: template.html
+        dest: /var/www/html/index.html
+
+    
+    - name: Undeploy Web Server
+      service:
+        name: httpd
+        enabled: false
+        state: stopped
+        
+    - name: Undeploy Web Server
+      file:
+        path: /var/www/html/index.html
+        state: absent    
+   
+    
+
+  
+    
+
+    
+        
+        
+
