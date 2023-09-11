@@ -24,7 +24,7 @@
         enabled: false
         state: stopped
         
-    - name: Undeploy Web Server
+    - name: Remove Web Server Html
       file:
         path: /var/www/html/index.html
         state: absent    
