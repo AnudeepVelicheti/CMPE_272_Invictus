@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Twitter Service UI</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Service</h1>
+
+        <h2>Create a Tweet</h2>
+        <form id="createTweetForm">
+            <textarea id="tweetText" placeholder="Enter your tweet"></textarea>
+            <button type="submit">Create Tweet</button>
+        </form>
+        <div id="createResult"></div>
+
+        <h2>Delete a Tweet</h2>
+        <form id="deleteTweetForm">
+            <input type="number" id="deleteTweetId" placeholder="Enter tweet ID">
+            <button type="submit">Delete Tweet</button>
+        </form>
+        <div id="deleteResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
